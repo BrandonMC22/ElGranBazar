@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Gran Bazar</title>
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <div class="menu-icon" id="menu-toggle"></div>
+            <div class="logo">El Gran <span>Bazar</span></div>
+        </div>
+        
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Buscar productos...">
+                <button class="search-button">&#128269;</button>
+            </div>
+        </div>
+        
+        <div class="icons-container">
+            <div class="icon-box" id="notifications-icon">
+                <div class="icon">&#128276;</div>
+                <div>Notificaciones</div>
+            </div>
+            <div class="icon-box" id="cart-icon">
+                <div class="icon">&#128722;</div>
+                <div>Carrito</div>
+            </div>
+            <div class="icon-box" id="account-icon">
+                <div class="icon">&#128100;</div>
+                <div>Mi cuenta</div>
+            </div>
+            <div class="icon-box" id="register-icon">
+                <div class="icon">&#9997;</div>
+                <div>Registrarse</div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="categories">
+        <button class="category-button">Ofertas</button>
+        <button class="category-button">Lácteos</button>
+        <button class="category-button">Frutas y verduras</button>
+        <button class="category-button">Despensa</button>
+        <button class="category-button">Refrigerados</button>
+        <button class="category-button">Dulcería</button>
+    </div>
+    
+    <div class="side-menu" id="side-menu">
+        <div class="menu-header"></div>
+        <div class="menu-title">Categorías</div>
+        <div class="menu-item">
+            Frutas y verduras
+            <span>&#10095;</span>
+        </div>
+        <div class="menu-item">
+            Cárnicos
+            <span>&#10095;</span>
+        </div>
+        <div class="menu-item">
+            Licores
+            <span>&#10095;</span>
+        </div>
+        <div class="menu-item">
+            Aseo
+            <span>&#10095;</span>
+        </div>
+        <div class="menu-item">
+            Granos
+            <span>&#10095;</span>
+        </div>
+        <div class="menu-item">
+            Lácteos y quesos
+            <span>&#10095;</span>
+        </div>
+        <div class="menu-item">
+            Panadería
+            <span>&#10095;</span>
+        </div>
+        <div class="menu-item">
+            Gaseosas
+            <span>&#10095;</span>
+        </div>
+        <div class="menu-item">
+            Cosméticos
+            <span>&#10095;</span>
+        </div>
+        <div class="menu-item">
+            Snack
+            <span>&#10095;</span>
+        </div>
+        <div class="menu-item">
+            Energizantes
+            <span>&#10095;</span>
+        </div>
+        <div class="menu-item">
+            Otras categorías
+            <span>&#10095;</span>
+        </div>
+    </div>
+    
+    <div class="overlay" id="overlay"></div>
+    
+    <main class="main-content">
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/tomate.jpg" alt="Tomate" style="width:100%; height:100%; object-fit:contain;">
+                </div>
+                <div class="product-price">$3.500</div>
+                <div class="product-name">Libra Tomate</div>
+                <button class="add-button" onclick="addToCart('Libra Tomate', 3500)">
+                    <span class="cart-icon">&#128722;</span>
+                    Agregar
+                </button>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/leche.jpg" alt="Leche" style="width:100%; height:100%; object-fit:contain;">
+                </div>
+                <div class="product-price">$9.500</div>
+                <div class="product-name">Leche entera</div>
+                <button class="add-button" onclick="addToCart('Leche entera', 9500)">
+                    <span class="cart-icon">&#128722;</span>
+                    Agregar
+                </button>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/queso.jpg" alt="Queso" style="width:100%; height:100%; object-fit:contain;">
+                </div>
+                <div class="product-price">$10.300</div>
+                <div class="product-name">Queso tajado</div>
+                <button class="add-button" onclick="addToCart('Queso tajado', 10300)">
+                    <span class="cart-icon">&#128722;</span>
+                    Agregar
+                </button>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/pollo.jpg" alt="Pollo" style="width:100%; height:100%; object-fit:contain;">
+                </div>
+                <div class="product-price">$19.200</div>
+                <div class="product-name">Pollo</div>
+                <button class="add-button" onclick="addToCart('Pollo', 19200)">
+                    <span class="cart-icon">&#128722;</span>
+                    Agregar
+                </button>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/pan.jpg" alt="Pan" style="width:100%; height:100%; object-fit:contain;">
+                </div>
+                <div class="product-price">$2.000</div>
+                <div class="product-name">Pan</div>
+                <button class="add-button" onclick="addToCart('Pan', 2000)">
+                    <span class="cart-icon">&#128722;</span>
+                    Agregar
+                </button>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/cepillo.jpg" alt="Cepillo" style="width:100%; height:100%; object-fit:contain;">
+                </div>
+                <div class="product-price">$5.000</div>
+                <div class="product-name">Cepillo de dientes</div>
+                <button class="add-button" onclick="addToCart('Cepillo de dientes', 5000)">
+                    <span class="cart-icon">&#128722;</span>
+                    Agregar
+                </button>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/pasta.jpg" alt="Pasta" style="width:100%; height:100%; object-fit:contain;">
+                </div>
+                <div class="product-price">$4.100</div>
+                <div class="product-name">Pasta</div>
+                <button class="add-button" onclick="addToCart('Pasta', 4100)">
+                    <span class="cart-icon">&#128722;</span>
+                    Agregar
+                </button>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/chocoball.jpg" alt="Chocoball" style="width:100%; height:100%; object-fit:contain;">
+                </div>
+                <div class="product-price">$15.200</div>
+                <div class="product-name">Chocoball 50 und</div>
+                <button class="add-button" onclick="addToCart('Chocoball 50 und', 15200)">
+                    <span class="cart-icon">&#128722;</span>
+                    Agregar
+                </button>
+            </div>
+        </div>
+    </main>
+    
+    <div class="registration-container" id="registration-container">
+        <div class="registration-form">
+            <div class="form-header">
+                <div class="form-title">EL GRAN BAZAR</div>
+                <div class="form-subtitle">Formulario de registro</div>
+            </div>
+            
+            <div class="form-group">
+                <input type="text" class="form-input" placeholder="Número documento">
+            </div>
+            
+            <div class="form-group">
+                <input type="text" class="form-input" placeholder="Tipo de documento">
+            </div>
+            
+            <div class="form-group">
+                <input type="radio" id="cedula-ciudadania" name="documento" class="form-radio">
+                <label for="cedula-ciudadania">Cédula de Ciudadanía</label>
+            </div>
+            
+            <div class="form-group">
+                <input type="radio" id="cedula-extranjeria" name="documento" class="form-radio">
+                <label for="cedula-extranjeria">Cédula de Extranjería</label>
+            </div>
+            
+            <div class="form-group">
+                <input type="radio" id="pasaporte" name="documento" class="form-radio">
+                <label for="pasaporte">Pasaporte</label>
+            </div>
+            
+            <div class="form-group">
+                <input type="radio" id="nit" name="documento" class="form-radio">
+                <label for="nit">Nit persona jurídica</label>
+            </div>
+            
+            <div class="form-group">
+                <input type="text" class="form-input" placeholder="Nombres o razón social">
+            </div>
+            
+            <div class="form-group">
+                <input type="text" class="form-input" placeholder="Dirección">
+            </div>
+            
+            <div class="form-group">
+                <input type="email" class="form-input" placeholder="Correo Electrónico">
+            </div>
+            
+            <div class="form-group">
+                <input type="tel" class="form-input" placeholder="Teléfono">
+            </div>
+            
+            <div class="form-group">
+                <input type="password" class="form-input" placeholder="Contraseña">
+            </div>
+            
+            <div class="form-buttons">
+                <button class="btn-cancel" id="cancel-btn">CANCELAR</button>
+                <button class="btn-submit" id="submit-btn">ENVIAR</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="toast" id="toast">Producto agregado al carrito</div>
+    
+    <!-- Enlace al archivo JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
